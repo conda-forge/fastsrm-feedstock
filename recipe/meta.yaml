@@ -1,5 +1,5 @@
 {% set name = "fastsrm" %}
-{% set version = "0.0.3" %}
+{% set version = "0.0.4" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fastsrm-{{ version }}.tar.gz
-  sha256: fe6655b39e3ee15c9ad526819f0832616818042e8589512658087b4b3bb81ee4
+  sha256: a3b53d9eaea5d313fab49f8043bf144d2c74daabeb1d3de254a9949bbeb8ff09
 
 build:
   number: 0
