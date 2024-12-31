@@ -7,22 +7,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fastsrm-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fastsrm-{{ version }}.tar.gz
   sha256: a3b53d9eaea5d313fab49f8043bf144d2c74daabeb1d3de254a9949bbeb8ff09
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.0
+    - python {{ python_min }}
   run:
     - joblib
     - matplotlib-base
-    - python >=3.0
+    - python >={{ python_min }}
     - python-picard
     - scikit-learn
     - tqdm
@@ -39,6 +39,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/hugorichard/FastSRM
