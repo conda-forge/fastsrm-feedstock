@@ -27,7 +27,7 @@ requirements:
     - python >=3.0
     - numpy >=1.12
     - scikit-learn >=0.23
-    - pytest>=6.2.5
+    - pytest >=6.2.5
     - scipy >=0.18.0
 
 
