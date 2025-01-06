@@ -1,5 +1,5 @@
 {% set name = "fastsrm" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.5" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fastsrm-{{ version }}.tar.gz
-  sha256: a3b53d9eaea5d313fab49f8043bf144d2c74daabeb1d3de254a9949bbeb8ff09
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fastsrm-{{ version }}.tar.gz
+  sha256: ca50d7222fd8328ace3c616084c2e1aa7e25668ec6b2fcbcc46567e5b81ec01d
 
 build:
   number: 0
@@ -17,19 +17,18 @@ build:
 
 requirements:
   host:
+    - python >=3.0
     - pip
-    - python >=3.0
+    - setuptools
+
   run:
-    - joblib
-    - matplotlib-base
+    - joblib >=1.1.0
+    - matplotlib-base >=2.0.0
     - python >=3.0
-    - python-picard
-    - scikit-learn
-    - tqdm
     - numpy >=1.12
     - scikit-learn >=0.23
-    - python-picard
-    - tqdm
+    - pytest >=6.2.5
+    - scipy >=0.18.0
 
 
 test:
