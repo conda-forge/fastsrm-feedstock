@@ -11,20 +11,20 @@ source:
   sha256: ca50d7222fd8328ace3c616084c2e1aa7e25668ec6b2fcbcc46567e5b81ec01d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.0
+    - python {{ python_min }}
     - pip
     - setuptools
 
   run:
     - joblib >=1.1.0
     - matplotlib-base >=2.0.0
-    - python >=3.0
+    - python >={{ python_min }}
     - numpy >=1.12
     - scikit-learn >=0.23
     - pytest >=6.2.5
@@ -38,6 +38,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/hugorichard/FastSRM
