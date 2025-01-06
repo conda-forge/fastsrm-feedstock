@@ -17,8 +17,10 @@ build:
 
 requirements:
   host:
-    - pip
     - python >=3.0
+    - pip
+    - setuptools
+
   run:
     - joblib
     - matplotlib-base
